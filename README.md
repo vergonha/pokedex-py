@@ -15,5 +15,9 @@ https://pypokedex.herokuapp.com/
 - Improve CSS ✔️
 - Add more info ✔️
 - Add better error handling ✔️
+- Status icon ❌
+- Evolution chain ❌
+- Skill tree ❌
 - Improve execution and application ❌
 - Improve folder management ❌
+- "RAP do RAYQUAZA「 POKÉMON 」- T.C. Punters" playing in the background ⌛
