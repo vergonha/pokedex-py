@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="static/css/pokeStyle.css" />
     <title>Resultado</title>
 </head>
 <body>
-    <h1>Pokemon Escolhido: {{pokeName}}</h1>
-    <p>Tipo: {{type_primary}}, {{type_secondary}}</p>
-    <p>Peso: {{weight}}kg</p>
-    <p>Tamanho: {{height}}m</p>
-    <img src="{{sprite}}" alt="{{pokeName}}">
+    <div class="centralizar">
+        <div class="title">
+            <h1>{{pokeName}}</h1>
+            <div class="icon">
+                <img src="{{sprite}}" alt="{{pokeName}}">
+            </div>
+        </div>
+        <div class="desc">
+            {% if type_secondary == "Nenhum" %}
+                <p>Tipo: {{type_primary}}</p>
+            {% else %}
+                <p>Tipo: {{type_primary}}, {{type_secondary}}</p>
+            {% endif %}
+            <p>Peso: {{weight}}kg</p>
+            <p>Tamanho: {{height}}m</p>
+            <br>
+            <div class="stats">
+                <p>HP: {{hp}}</p>
+                <p>Ataque: {{attack}}</p>
+                <p>Defesa: {{defense}}</p>
+                <p>Ataque Especial: {{special_attack}}</p>
+                <p>Defesa Especial: {{special_defense}}</p>
+                <p>Velocidade: {{speed}}</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
