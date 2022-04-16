@@ -34,6 +34,7 @@ def index():
 @app.route(f"/pokemon", methods=["POST", "GET"])
 def pokemon():
     pokeName = request.form.get('pokemon')
+    pokeName = pokeName.capitalize()
     infos = findPokeByName(pokeName)
     type_primary = infos[0]
     type_secondary = infos[1]
