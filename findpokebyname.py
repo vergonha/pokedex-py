@@ -22,12 +22,12 @@ def findPokeByName(pokeName):
         request = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokemonName}")
         todo = json.loads(request.content)
 
-        nomePokemon = todo['name']
+        nomePokemon = todo['name'].capitalize()
         spriteTodo = todo['sprites']
         sprite = spriteTodo["front_default"]
-        type_primary = todo['types'][0]['type']['name']
+        type_primary = todo['types'][0]['type']['name'].capitalize()
         try:
-            type_secondary = todo['types'][1]['type']['name']
+            type_secondary = todo['types'][1]['type']['name'].capitalize()
         except:
             type_secondary = "Nenhum"
         weight = todo['weight']/10

@@ -11,27 +11,27 @@
 <body>
     <div class="centralizar">
         <div class="title">
-            <h1>{{nomePokemon}}</h1>
+            <h1>{{pokemon.nomePokemon}}</h1>
             <div class="icon">
-                <img src="{{sprite}}" alt="{{pokeName}}">
+                <img src="{{pokemon.sprite}}" alt="{{pokemon.nomePokemon}}">
             </div>
         </div>
         <div class="desc">
-            {% if type_secondary == "Nenhum" %}
-                <p>Tipo: {{type_primary}}</p>
+            {% if pokemon.type_secondary == "Nenhum" %}
+                <p>Tipo: {{pokemon.type_primary}}</p>
             {% else %}
-                <p>Tipo: {{type_primary}}, {{type_secondary}}</p>
+                <p>Tipo: {{pokemon.type_primary}}, {{pokemon.type_secondary}}</p>
             {% endif %}
-            <p>Peso: {{weight}}kg</p>
-            <p>Tamanho: {{height}}m</p>
+            <p>Peso: {{pokemon.weight}}kg</p>
+            <p>Tamanho: {{pokemon.height}}m</p>
             <br>
             <div class="stats">
-                <p>HP: {{hp}}</p>
-                <p>Ataque: {{attack}}</p>
-                <p>Defesa: {{defense}}</p>
-                <p>Ataque Especial: {{special_attack}}</p>
-                <p>Defesa Especial: {{special_defense}}</p>
-                <p>Velocidade: {{speed}}</p>
+                <p>HP: {{pokemon.hp}}</p>
+                <p>Ataque: {{pokemon.attack}}</p>
+                <p>Defesa: {{pokemon.defense}}</p>
+                <p>Ataque Especial: {{pokemon.special_attack}}</p>
+                <p>Defesa Especial: {{pokemon.special_defense}}</p>
+                <p>Velocidade: {{pokemon.speed}}</p>
             </div>
         </div>
     </div>

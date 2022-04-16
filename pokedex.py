@@ -16,39 +16,13 @@ def index():
 def pokemon():
     pokeName = request.form.get('pokemon')
     pokeName = pokeName.capitalize()
-    
     try:
         pokemon = findpokebyname.findPokeByName(pokeName)
     except:
         return render_template('error.html')
 
-    nomePokemon = pokemon.nomePokemon
-    type_primary = pokemon.type_primary
-    type_secondary = pokemon.type_secondary
-    weight = pokemon.weight
-    height = pokemon.height
-    sprite = pokemon.sprite
-    hp = pokemon.hp
-    attack = pokemon.attack
-    defense = pokemon.defense
-    special_attack = pokemon.special_attack
-    special_defense = pokemon.special_defense
-    speed = pokemon.speed
-
     return render_template('pokemon.html', 
-        nomePokemon=nomePokemon.capitalize(),
-        type_primary=type_primary.capitalize(), 
-        type_secondary=type_secondary.capitalize(), 
-        weight=weight, 
-        height=height, 
-        pokeName=pokeName, 
-        sprite=sprite,
-        hp=hp,
-        attack=attack,
-        defense=defense,
-        special_attack=special_attack,
-        special_defense=special_defense,
-        speed=speed,
+        pokemon=pokemon
         )
 
 @app.route("/error")
