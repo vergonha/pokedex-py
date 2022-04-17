@@ -24,7 +24,7 @@ def findPokeByName(pokeName):
 
         nomePokemon = todo['name'].capitalize()
         spriteTodo = todo['sprites']
-        sprite = spriteTodo["front_default"]
+        sprite = spriteTodo['other']['official-artwork']['front_default']
         type_primary = todo['types'][0]['type']['name'].capitalize()
         try:
             type_secondary = todo['types'][1]['type']['name'].capitalize()
@@ -41,3 +41,4 @@ def findPokeByName(pokeName):
 
         pokemon = Pokemon(sprite, nomePokemon, type_primary, type_secondary, weight, height, hp, attack, defense, special_attack, special_defense, speed)
         return pokemon
+
