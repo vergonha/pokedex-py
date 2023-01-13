@@ -6,9 +6,12 @@
 
 
 ```bash
-https://pypokedex.herokuapp.com/
+Heroku no longer supports Free Plan :(
 ```
 
+![](https://i.imgur.com/jhATIaV.png)
+![](https://i.imgur.com/b3O2Aae.png)
+![](https://i.imgur.com/lZluuYx.png)
     
 ## To do:
 
